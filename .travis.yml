@@ -19,12 +19,8 @@ addons:
 script:
   - xvfb-run polymer test --module-resolution=node --npm
   - >-
-    >-
-
     if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then polymer test
-    --module-resolution=node --npm -s 'default';
-
-    fi
+    --module-resolution=node --npm -s 'default'; fi
 dist: trusty
 cache:
   directories:
